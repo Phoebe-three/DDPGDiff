@@ -1,2 +1,2 @@
 # DDPGDiff
-A Dual-Domain Physics-Guided Diffusion Framework for Millimeter-Wave SAR Sparse Imaging
+This is a reviewer-preview version for the paper "A Dual-Domain Physics-Guided Diffusion Framework for Millimeter-Wave SAR Sparse Imaging". The core training and model implementation will be fully released upon paper acceptance.
