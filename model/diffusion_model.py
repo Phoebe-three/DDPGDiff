@@ -2,9 +2,8 @@ import torch
 import torch.nn as nn
 import math
 from physical_modules import PCGA, EDCM
-
-# 引用你原有的复数基础组件（与 base_UNet.py 保持一致）
 from base_UNet import ComplexConv2d, ComplexBatchNorm2d, ComplexLeakyReLU, ComplexUpsample, ComplexMaxPool2d
+import torch.nn.functional as F
 
 
 class SinusoidalPositionEmbeddings(nn.Module):

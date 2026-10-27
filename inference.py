@@ -23,9 +23,8 @@ config = {
     'R': 300e-3
 }
 
-def inference(full_echo, sparse_echo, mask, config):
+def inference(full_echo, config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 
     steps = 50
     project_beta = 0.25
@@ -41,8 +40,8 @@ def inference(full_echo, sparse_echo, mask, config):
     fs = config['Fs']
     tI = config['tI']
 
-    ddnpnet = DDNPNet(input_channels=1, output_channels=1, base_channels=64, time_dim=64, dx=dx, dy=dy, F0=F0, branch=True).to(device)
-    ddpgdiff = ConditionalComplexDDPM(ddnpnet, timesteps=1000).to(device)
+    ddnpnet = DDNPNet(input_channels=1, output_channels=1, base_channels=32, time_dim=32, dx=dx, dy=dy, F0=F0, branch=True).to(device)
+    ddpgdiff = ConditionalComplexDDPM(ddnpnet, timesteps=500).to(device)
 
     ddpgdiff.load_state_dict(torch.load(
         "pretrained.pth",
