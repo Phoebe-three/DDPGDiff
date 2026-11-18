@@ -1,2 +1,2 @@
 # DDPGDiff
-This is a reviewer-preview version for the paper "A Dual-Domain Physics-Guided Diffusion Framework for Millimeter-Wave SAR Sparse Imaging". The core training and model implementation will be fully released upon paper acceptance.
+This is a reviewer-preview version for the paper "A Dual-Domain Physics-Guided Diffusion Framework for Sparse Near-Field Millimeter-Wave Synthetic Aperture Radar Imaging". The core training and model implementation will be fully released upon paper acceptance.
